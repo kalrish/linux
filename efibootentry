@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec efibootmgr -c -d /dev/nvme0n1 -p 1 -L "Gentoo ${PWD}" -l "/boot/vmlinuz-${PWD}"
