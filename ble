@@ -2,5 +2,5 @@
 
 # Add a boot loader entry after the freedesktop.org Boot Loader Specification
 
-export version="$(basename "${PWD}")"
-exec envsubst < ../entry.conf.sh > "/boot/loader/entries/${version}.conf"
+export version="$(basename -- "${1}")"
+exec envsubst < entry.conf.sh > "/boot/loader/entries/${version}.conf"
